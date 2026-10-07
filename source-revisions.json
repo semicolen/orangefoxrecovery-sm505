@@ -1,0 +1,15 @@
+{
+  "manifest_branch": "twrp-12.1 / fox_12.1",
+  "orangefox_sync": "53a303ecfb622c516082d3e61dbaa7d9f02f0120",
+  "base_device_tree": "bfb77ebcb4e3a63fe20c49a7051229104ffa934f",
+  "orangefox_recovery": "cbcc4f713dbef98d76d6d2cfd019b1ebfd9418e9",
+  "orangefox_vendor": "cea00cabf2e8ce50fc9f0b5cda99b5801855847a",
+  "stock_firmware": "T505XXS8CXG1",
+  "stock_recovery_sha256": "8e8828e48aae637d1031de95e5e5da2364ec3bf0bb9765797424e2e1586d25ab",
+  "host_build_patch": "tools/low_memory_build.py",
+  "recovery_source_patch": "tools/skip_fbe_patch.py",
+  "official_vendor_patch": "OrangeFox/sync: patches/patch-vendor-twrp-fox_12.1.diff applied to vendor/twrp",
+  "release_version": "R12.0_3",
+  "unlock_button_default": true,
+  "fbe_decryption_skipped": true
+}

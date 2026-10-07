@@ -1,0 +1,40 @@
+{
+  "stock_vendor_files": [
+    "bin/hw/android.hardware.gatekeeper@1.0-service",
+    "bin/hw/android.hardware.keymaster@4.0-service",
+    "bin/qseecomd",
+    "lib64/android.hardware.gatekeeper@1.0-impl.so",
+    "lib64/libQSEEComAPI.so",
+    "lib64/libdiag.so",
+    "lib64/libdrmfs.so",
+    "lib64/libgrdm.so",
+    "lib64/libkeymaster4.so",
+    "lib64/libkeymaster4_1support.so",
+    "lib64/libkeymaster4support.so",
+    "lib64/libkeymaster_helper.so",
+    "lib64/libkeymaster_messages.so",
+    "lib64/libkeymaster_portable.so",
+    "lib64/libpuresoftkeymasterdevice.so",
+    "lib64/libskeymaster4device.so",
+    "lib64/libsoft_attestation_cert.so"
+  ],
+  "system_dependencies": [
+    "android.hardware.gatekeeper@1.0.so",
+    "android.hardware.keymaster@3.0.so",
+    "android.hardware.keymaster@4.0.so",
+    "android.hardware.keymaster@4.1.so",
+    "libbase.so",
+    "libc++.so",
+    "libc.so",
+    "libcrypto.so",
+    "libcutils.so",
+    "libdl.so",
+    "libhardware.so",
+    "libhidlbase.so",
+    "libion.so",
+    "liblog.so",
+    "libm.so",
+    "libutils.so",
+    "libxml2.so"
+  ]
+}

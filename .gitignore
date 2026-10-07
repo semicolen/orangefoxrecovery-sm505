@@ -1,0 +1,8 @@
+sources/
+device-info/
+logs/
+out/
+device/samsung/gta4l/.git/
+__pycache__/
+# Unused padded stock DTBO; the build uses prebuilt/recovery-dtbo.img.
+device/samsung/gta4l/prebuilt/dtbo.img
