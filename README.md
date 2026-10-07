@@ -8,6 +8,8 @@ include an Odin tar, raw recovery image, native OrangeFox installer ZIP,
 SHA-256 checksums and a verification report. See [release notes](RELEASE_NOTES.md)
 and [source provenance](NOTICE.md).
 
+## Installation
+To install, first flash the included `vbmeta_disabled_R.tar` under the AP slot in the latest version of Odin. Reboot directly back into Download Mode, then flash `OrangeFox-R12.0_3-SM-T505.tar` under AP with Auto Reboot disabled in Odin. Once the flash is complete, manually reboot the device into recovery by holding `Down button`, `Power button` for 7s. 
 ## Changes and validation
 
 The inactivity lock screen uses an **Unlock button by default**. The tablet
