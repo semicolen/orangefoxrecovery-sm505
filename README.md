@@ -10,32 +10,6 @@ and [source provenance](NOTICE.md).
 
 ## Installation
 To install, first flash the included `vbmeta_disabled_R.tar` under the AP slot in the latest version of Odin. Reboot directly back into Download Mode, then flash `OrangeFox-R12.0_3-SM-T505.tar` under AP with Auto Reboot disabled in Odin. Once the flash is complete, manually reboot the device into recovery by holding `Down button`, `Power button` for 7s. 
-## Changes and validation
-
-The inactivity lock screen uses an **Unlock button by default**. The tablet
-owner confirmed the equivalent live setting works in TEST2. Previously saved
-preferences can override the default.
-
-Automatic file-based data decryption is disabled to avoid the startup hang.
-Encrypted internal storage is unavailable. The included source patch keeps
-skipped FBE data marked locked and prevents subsequent decryption attempts.
-
-| Check | Result |
-| --- | --- |
-| Main UI, ADB and basic touch | Confirmed on TEST2 / R12.0_2 |
-| Inactivity swipe unlock | Failed on the tablet |
-| Unlock button | User-confirmed working in TEST2; enabled by default in R12.0_3 |
-| R12.0_3 boot on the tablet | Not yet tested |
-| Stock encrypted-data decryption | Disabled |
-| Backup/restore and other recovery operations | Not validated |
-
-Static checks verify the stock kernel/DTB/DTBO bytes, Android v2 boot header,
-load addresses, Samsung footer and recovery partition size. Packaging verifies
-that the Odin tar and installer ZIP contain the same image. Crypto dependency
-checks cover required ARM64 ELF files; they do not prove Samsung decryption works.
-
-No unlock, format, bootloader flash or vbmeta replacement is performed by these
-build scripts. No other Tab A7 model has been validated.
 
 ## Build
 
@@ -94,12 +68,3 @@ unlock-button change.
 Startup snapshots, logcat and kernel logs are stored in RAM under `/tmp` and
 must be collected before rebooting. Logs, settings backups, full stock firmware,
 Android source checkouts and build outputs are excluded from Git.
-
-## History
-
-The initial build reached the OrangeFox splash but not the UI. TEST2 skipped
-FBE startup and added crypto HAL declarations and RAM diagnostics. On
-7 October 2026, TEST2 reached the UI and its ADB version was verified. Swipe
-unlock failed; enabling `lock_btn=1` showed a working Unlock button. That
-preference was saved on the tablet. R12.0_3 embeds the same option as the
-default for new installations.
